@@ -26,4 +26,10 @@ public class PlayerMoney : MonoBehaviour
     {
         return _moneyAmount - price >= 0;
     }
+
+    public void EarnMoney(int money)
+    {
+        _moneyAmount += money;
+        _money.text = "money: " + _moneyAmount.ToString();
+    }
 }
