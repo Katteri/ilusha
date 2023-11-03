@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using Microsoft.MixedReality.Toolkit.Utilities;
 using TMPro;
+using Microsoft.MixedReality.Toolkit.UI;
 
 public class ARMenu : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class ARMenu : MonoBehaviour
     [SerializeField] private GridObjectCollection _gridObjectCollection;
 
     [SerializeField] private PlayerMoney _playerMoney;
+
+    [SerializeField] private ScrollingObjectCollection _scrollingObjectCollection;
+    [SerializeField] private PlayerMoney playerMoney;
 
     private void Start()
     {
@@ -60,5 +64,7 @@ public class ARMenu : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         _gridObjectCollection.UpdateCollection();
+
+        _scrollingObjectCollection.UpdateContent();
     }
 }

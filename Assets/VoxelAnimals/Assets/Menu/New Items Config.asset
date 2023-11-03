@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - Title: "\u041A\u043E\u0448\u043A\u0430 \u043E\u0431\u044B\u043A\u043D\u043E\u0432\u0435\u043D\u043D\u0430\u044F"
-    buttonPrefab: {fileID: 2181284821111225486, guid: bfc008c6fcd4461429fc6c5f554ecf7d, type: 3}
+    buttonPrefab: {fileID: 8025449633771821046, guid: 12cb6620f386010439dc3bbc1116b47d, type: 3}
     objectPrefab: {fileID: 7846376437517728033, guid: 8d3f8c34e9eab2943b54b4b32e80dec9, type: 3}
     Price: 200
   - Title: "\u0418\u0441\u0442\u043E\u0447\u043D\u0438\u043A \u0436\u0438\u0437\u043D\u0438"
-    buttonPrefab: {fileID: 2181284821111225486, guid: bfc008c6fcd4461429fc6c5f554ecf7d, type: 3}
+    buttonPrefab: {fileID: 8025449633771821046, guid: 12cb6620f386010439dc3bbc1116b47d, type: 3}
     objectPrefab: {fileID: 298895156348666778, guid: 3c61d02319cdbda45b6ccf4ec2e19b86, type: 3}
     Price: 1000
   - Title: "\u0416\u0438\u0442\u0435\u043B\u044C \u0441\u0435\u0432\u0435\u0440\u0430"
-    buttonPrefab: {fileID: 2181284821111225486, guid: bfc008c6fcd4461429fc6c5f554ecf7d, type: 3}
+    buttonPrefab: {fileID: 8025449633771821046, guid: 12cb6620f386010439dc3bbc1116b47d, type: 3}
     objectPrefab: {fileID: 2590791453208567811, guid: 648f69ef76f693846a8f3aa6dd0df324, type: 3}
     Price: 400
   - Title: "\u0413\u043E\u0440\u044F\u0447\u0438\u0439 \u0441\u0430\u043C\u0435\u0446"
-    buttonPrefab: {fileID: 2181284821111225486, guid: bfc008c6fcd4461429fc6c5f554ecf7d, type: 3}
+    buttonPrefab: {fileID: 8025449633771821046, guid: 12cb6620f386010439dc3bbc1116b47d, type: 3}
     objectPrefab: {fileID: 796487376042068872, guid: ab19742eeb8c77c4595523fbd3755e38, type: 3}
     Price: 500
