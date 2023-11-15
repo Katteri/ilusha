@@ -6,6 +6,10 @@ TagManager:
   tags:
   - toys
   - mini-game
+  - chicken
+  - cat
+  - lion
+  - penguin
   layers:
   - Default
   - TransparentFX

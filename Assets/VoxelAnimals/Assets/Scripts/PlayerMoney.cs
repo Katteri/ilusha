@@ -6,8 +6,8 @@ using UnityEngine.UIElements;
 
 public class PlayerMoney : MonoBehaviour
 {
-    [SerializeField] public int _moneyAmount;
-    [SerializeField] public TextMeshPro _money;
+    public int _moneyAmount;
+    public TextMeshPro _money;
 
     public void Start()
     {

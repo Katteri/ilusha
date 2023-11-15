@@ -1,17 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class BoxGame : MonoBehaviour
 {
-    public int _win;
-    private void OnCollisionEnter(Collision collision)
+    
+    [SerializeField] private GameSpawn gameSpawn;
+
+    private void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.tag == "mini-game")
+        if (collider.gameObject.tag == "mini-game")
         {
-            _win++;
-            Destroy(collision.gameObject);
-            Debug.Log(_win.ToString());
+            gameSpawn.Score();
+            Destroy(collider.gameObject);
         }
+    }
+
+    public void StartGame()
+    {
+        var _position = Camera.main.transform.position + Camera.main.transform.forward * 0.2f;
+        this.transform.position = _position;
+        this.gameObject.SetActive(true);
+    }
+
+    public void EndGame()
+    {
+        this.gameObject.SetActive(false);
     }
 }

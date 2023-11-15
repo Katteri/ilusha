@@ -29,8 +29,8 @@ public class ARbutton : MonoBehaviour
     {
         OnButtonClicked?.Invoke();
         //var randPosition = new Vector3(UnityEngine.Random.Range(-5f, 5f), UnityEngine.Random.Range(-5f, 5f), UnityEngine.Random.Range(-5f, 5f));
-        var position = Camera.main.transform.position + Camera.main.transform.forward * 2;
-        var item = Instantiate(_item.objectPrefab, position, Quaternion.identity);
+        //var position = Camera.main.transform.position + Camera.main.transform.forward * 2;
+        var item = Instantiate(_item.objectPrefab, (_item.objectPrefab.transform.position + Camera.main.transform.forward * 0.1f), Quaternion.identity);
         item.GetComponent<Rigidbody>().isKinematic = false;
 
     }

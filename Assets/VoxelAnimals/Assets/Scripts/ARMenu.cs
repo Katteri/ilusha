@@ -19,7 +19,6 @@ public class ARMenu : MonoBehaviour
     [SerializeField] private PlayerMoney _playerMoney;
 
     [SerializeField] private ScrollingObjectCollection _scrollingObjectCollection;
-    [SerializeField] private PlayerMoney playerMoney;
 
     private void Start()
     {
