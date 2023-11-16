@@ -26,6 +26,7 @@ public class GameSpawn : MonoBehaviour
         //this.transform.Rotate(-90.0f, -90.0f, -90.0f, Space.Self);
         //this.transform.position = _position;
         _boxGame.StartGame();
+        _score.text = "очки: " + _win.ToString();
         InvokeRepeating("Spawn", _delay, 0.5f);        
     }
 
@@ -41,9 +42,9 @@ public class GameSpawn : MonoBehaviour
 
     public void StopPlay()
     {
-        _win = 0;
         _boxGame.EndGame();
-        _playerMoney.EarnMoney(_win  * 10);
+        _playerMoney.EarnMoney(_win * 10);
+        _win = 0;
         CancelInvoke();
         GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("mini-game");
         foreach (GameObject obj in objectsWithTag)

@@ -21,8 +21,9 @@ public class Timer : MonoBehaviour
     {
         timeStart = 60;
         timerText.text = timeStart.ToString();
-        stopMiniGame.OnClick.AddListener(timeEnd);
         audioSource.PlayOneShot(_music);
+        stopMiniGame.OnClick.AddListener(timeEnd);
+        
     }
     void Update()
     {
@@ -36,7 +37,7 @@ public class Timer : MonoBehaviour
     }
     public void timeEnd()
     {
-        audioSource.Stop();
+        //audioSource.Stop();
         menuMiniGame.SetActive(false);
         mainMenu.SetActive(true);
         miniGame.StopPlay();

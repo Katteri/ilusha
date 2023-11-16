@@ -20,6 +20,7 @@ public class ARMenu : MonoBehaviour
 
     [SerializeField] private ScrollingObjectCollection _scrollingObjectCollection;
 
+
     private void Start()
     {
         UpdateButtons();
@@ -29,6 +30,7 @@ public class ARMenu : MonoBehaviour
     {
         for (int i = 0; i < _root.childCount; i++)
         {
+            //_root.GetChild(i).gameObject.SetActive(false);
             Destroy(_root.GetChild(i).gameObject);
         }
 
@@ -39,6 +41,7 @@ public class ARMenu : MonoBehaviour
                 continue;
             }
             var button = Instantiate(_buttonPrefab, _root);
+
 
             if (button.TryGetComponent(out ARbutton arButton))
             {
