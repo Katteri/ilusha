@@ -44,7 +44,7 @@ public class GameSpawn : MonoBehaviour
     {
         _boxGame.EndGame();
         _playerMoney.EarnMoney(_win * 10);
-        _win = 0;
+        
         CancelInvoke();
         GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("mini-game");
         foreach (GameObject obj in objectsWithTag)
@@ -72,5 +72,7 @@ public class GameSpawn : MonoBehaviour
         {
             Instantiate(food[4], _position, Quaternion.identity);
         }
+
+        _win = 0;
     }
 }
