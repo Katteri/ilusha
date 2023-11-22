@@ -4,10 +4,13 @@ using UnityEngine;
 using static UnityEditor.Progress;
 using UnityEngine.UIElements;
 
+using UnityEngine.Events;
 public class PlayerMoney : MonoBehaviour
 {
     public int _moneyAmount;
     public TextMeshPro _money;
+
+    [HideInInspector] public UnityEvent UnityEvent;
 
     public void Start()
     {
@@ -28,11 +31,13 @@ public class PlayerMoney : MonoBehaviour
     public bool CanBuy(int price)
     {
         return _moneyAmount - price >= 0;
+
     }
 
     public void EarnMoney(int money)
     {
         _moneyAmount += money;
         _money.text = "money: " + _moneyAmount.ToString();
+        UnityEvent?.Invoke();
     }
 }

@@ -24,13 +24,13 @@ public class ARMenu : MonoBehaviour
     private void Start()
     {
         UpdateButtons();
+        //_playerMoney.EarnMoney.AddListener(UpdateButtons);
     }
 
     private void UpdateButtons()
     {
         for (int i = 0; i < _root.childCount; i++)
         {
-            //_root.GetChild(i).gameObject.SetActive(false);
             Destroy(_root.GetChild(i).gameObject);
         }
 
