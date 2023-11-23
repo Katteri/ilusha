@@ -11,6 +11,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private Interactable stopMiniGame;
     [SerializeField] private GameSpawn miniGame;
+   
 
     public float timeStart;
     [SerializeField] public TextMeshPro timerText;
@@ -41,5 +42,6 @@ public class Timer : MonoBehaviour
         menuMiniGame.SetActive(false);
         mainMenu.SetActive(true);
         miniGame.StopPlay();
+        GameObject.FindAnyObjectByType<ARMenu>().UpdateButtons();
     }
 }

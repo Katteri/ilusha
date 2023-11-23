@@ -24,10 +24,9 @@ public class ARMenu : MonoBehaviour
     private void Start()
     {
         UpdateButtons();
-        //_playerMoney.EarnMoney.AddListener(UpdateButtons);
     }
 
-    private void UpdateButtons()
+    public void UpdateButtons()
     {
         for (int i = 0; i < _root.childCount; i++)
         {

@@ -10,8 +10,6 @@ public class PlayerMoney : MonoBehaviour
     public int _moneyAmount;
     public TextMeshPro _money;
 
-    [HideInInspector] public UnityEvent UnityEvent;
-
     public void Start()
     {
         _money.text = "money: " + _moneyAmount.ToString();
@@ -38,6 +36,5 @@ public class PlayerMoney : MonoBehaviour
     {
         _moneyAmount += money;
         _money.text = "money: " + _moneyAmount.ToString();
-        UnityEvent?.Invoke();
     }
 }

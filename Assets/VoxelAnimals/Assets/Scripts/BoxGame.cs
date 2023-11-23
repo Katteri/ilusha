@@ -11,8 +11,9 @@ public class BoxGame : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "mini-game")
+        if (collider.gameObject.CompareTag("mini-game"))
         {
+            Debug.Log("hgg");
             gameSpawn.Score();
             Destroy(collider.gameObject);
         }
@@ -20,13 +21,13 @@ public class BoxGame : MonoBehaviour
 
     public void StartGame()
     {
-        var _position = Camera.main.transform.position + Camera.main.transform.forward * 0.2f;
-        this.transform.position = _position;
-        this.gameObject.SetActive(true);
+        var _position = Camera.main.transform.position + Camera.main.transform.forward * 1.5f;
+        transform.parent.position = _position;
+        this.gameObject.transform.parent.gameObject.SetActive(true);
     }
 
     public void EndGame()
     {
-        this.gameObject.SetActive(false);
+        this.gameObject.transform.parent.gameObject.SetActive(false);
     }
 }
