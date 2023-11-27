@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Microsoft.MixedReality.Toolkit.UI;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class GameMang : MonoBehaviour
 {

@@ -1,7 +1,6 @@
 using System;
 using TMPro;
 using UnityEngine;
-using static UnityEditor.Progress;
 using UnityEngine.UIElements;
 
 using UnityEngine.Events;
