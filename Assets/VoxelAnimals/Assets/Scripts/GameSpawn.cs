@@ -20,10 +20,7 @@ public class GameSpawn : MonoBehaviour
     public void Play()
     {
         _position = Camera.main.transform.position + Camera.main.transform.forward * 1.5f;
-        //var item = Instantiate(_box, _position, Quaternion.identity);
-        //this.gameObject.SetActive(true);
-        //this.transform.Rotate(-90.0f, -90.0f, -90.0f, Space.Self);
-        //this.transform.position = _position;
+
         _boxGame.StartGame();
         _score.text = "очки: " + _win.ToString();
         InvokeRepeating("Spawn", _delay, 0.5f);
@@ -36,7 +33,8 @@ public class GameSpawn : MonoBehaviour
     }
     void Spawn()
     {
-        Instantiate(_flower, new Vector3(Random.Range(-(_position.x+1.5f), (_position.x+1.5f)), 2f, _position.z), Quaternion.identity);
+        GameObject Flower = Instantiate(_flower, new Vector3(Random.Range(-(_position.x+1.5f), (_position.x+1.5f)), 2f, _position.z), Quaternion.identity);
+        Destroy(Flower, 2);
     }
 
     public void StopPlay()
@@ -45,11 +43,6 @@ public class GameSpawn : MonoBehaviour
         _playerMoney.EarnMoney(_win * 10);
         
         CancelInvoke();
-        GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("mini-game");
-        foreach (GameObject obj in objectsWithTag)
-        {
-            Destroy(obj);
-        }
 
         if (_win >= 2 && _win < 5)
         {

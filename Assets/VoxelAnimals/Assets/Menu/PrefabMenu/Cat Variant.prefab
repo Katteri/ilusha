@@ -100,6 +100,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1585349779547952, guid: aa2d47f95b34fbe4d9cbe095f13585b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9174535982892041262}
+    - targetCorrespondingSourceObject: {fileID: 1585349779547952, guid: aa2d47f95b34fbe4d9cbe095f13585b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8380258518982102820}
   m_SourcePrefab: {fileID: 100100000, guid: aa2d47f95b34fbe4d9cbe095f13585b5, type: 3}
 --- !u!1 &7846376437517728033 stripped
 GameObject:
@@ -223,7 +226,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7846376437517728033}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 181cd563a8349c34ea8978b0bc8d9c7e, type: 3}
   m_Name: 
@@ -231,7 +234,7 @@ MonoBehaviour:
   hostTransform: {fileID: 7847849300596273993}
   manipulationType: 3
   twoHandedManipulationType: 7
-  allowFarManipulation: 1
+  allowFarManipulation: 0
   useForcesForNearManipulation: 0
   oneHandRotationModeNear: 1
   oneHandRotationModeFar: 1
@@ -273,6 +276,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _eatingAudio: {fileID: 8300000, guid: fceb08c73637a3f408003876a4a13a81, type: 3}
   audioSource: {fileID: 5696164536873849534}
+--- !u!114 &8380258518982102820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7846376437517728033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5afd5316c63705643b3daba5a6e923bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowTetherWhenManipulating: 0
+  IsBoundsHandles: 0
 --- !u!4 &7847849300596273993 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4333491988720984, guid: aa2d47f95b34fbe4d9cbe095f13585b5, type: 3}

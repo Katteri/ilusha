@@ -427,7 +427,7 @@ MonoBehaviour:
   hostTransform: {fileID: 6476846792000515835}
   manipulationType: 3
   twoHandedManipulationType: 7
-  allowFarManipulation: 1
+  allowFarManipulation: 0
   useForcesForNearManipulation: 0
   oneHandRotationModeNear: 1
   oneHandRotationModeFar: 1
