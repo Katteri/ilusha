@@ -19,7 +19,8 @@ public class GameSpawn : MonoBehaviour
     [SerializeField] private BoxGame _boxGame;
     public void Play()
     {
-        _position = Camera.main.transform.position + Camera.main.transform.forward * 1.5f;
+        //_position = Camera.main.transform.position + Camera.main.transform.forward * 1.5f;
+        _position = Camera.main.transform.position + Camera.main.transform.forward;
 
         _boxGame.StartGame();
         _score.text = "очки: " + _win.ToString();

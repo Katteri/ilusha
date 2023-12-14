@@ -21,7 +21,8 @@ public class BoxGame : MonoBehaviour
 
     public void StartGame()
     {
-        var _position = Camera.main.transform.position + Camera.main.transform.forward * 1.5f;
+        //var _position = Camera.main.transform.position + Camera.main.transform.forward * 1.5f;
+        var _position = Camera.main.transform.position + Camera.main.transform.forward;
         transform.parent.position = _position;
         this.gameObject.transform.parent.gameObject.SetActive(true);
     }
